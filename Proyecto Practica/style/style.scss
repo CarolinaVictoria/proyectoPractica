@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    width: auto;
+}
+
+$colorPrimario: #F1E8B8;
+$colorSecundario: #F8C0C8;
+$colorTerciario: #788585;
+
+@mixin button{
+    border-radius: 50px;
+    padding: 15px 30px;
+    display: block;
+    margin: 50px auto;
+    border: none;
+}
+
+body{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    .background{
+        background-color: $colorPrimario;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            img{
+                margin: 10px;
+            }
+        }
+        .main{
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+                .graficos{
+                  width: 50%;
+                  display: block;
+                  margin: auto 10px;
+                }
+                .texto-main{
+                    display: flex;
+                    flex-direction: column;
+                    width: 40%;
+                    justify-content: space-around;
+                    h1{
+                        text-align:left;
+                        padding: 1px;
+                        font-size: 58px;
+                        font-weight:900;
+                    }
+                    .primer-gris{
+                        text-align: left;
+                        font-size: 28px;
+                    }
+                
+                    .button-1{
+                        @include button;
+                        margin: 20px 0;
+                        width: 200px;
+                    }
+                }
+        }
+        .elementos-secundarios{
+            h2{
+                text-align: center;
+                font-size: 40px;
+            }
+            .subtitulo-secundario{
+                text-align: center;
+            }
+        }
+        .sections{
+            margin: 50px auto;
+            padding: 10px;
+            width: 70%;
+            .section-title{
+                padding: 10px;
+                margin: 15px 10px;
+                background-color: $colorTerciario;
+                border-radius: 15px;
+            }
+        }
+        .title-people{
+            text-align: center;
+            margin: 30px auto;
+        }
+        .cards{
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            margin: auto;
+            .card{
+                margin: 20px 30px;
+                padding: 15px;
+                background-color: $colorSecundario;
+                border-radius: 15px;
+                .pic{
+                    margin: 10px 10px 10px 60px;
+                    float: right;
+                    
+                }
+                .name{
+                    padding: 10px;
+                    margin: 10px 0;
+                }
+                .paragraph{
+                    padding: 10px;
+                    width: 90%;
+                }
+            }
+        }
+        .button-2{
+            @include button;
+        }
+        .azul{
+            background-color: gray;
+            padding: 15px;
+            margin:20px auto;
+            height: 200px;
+            h5{
+                font-size: 32px;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .button-3{
+                @include button;
+                margin: 0;
+            }
+        }
+        .form{
+            display: flex;
+            justify-content: center;
+            input{
+                @include button;
+                margin: 10px;
+                padding: 10px 25px;
+            }
+        }
+        .footer{
+            background-color:black;
+            max-height: 230px;
+            .elementos-inferiores{
+                display: flex;
+                justify-content: space-around;
+                margin: auto;
+                height: 200px;
+                .nav-bar-block{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    list-style: none;
+                    li{
+                        font-size: 12px;
+                        margin: 5px;
+                        width: 120px;
+                        text-decoration: none;
+                        list-style: none;
+                        .nav-bar-link{
+                            text-decoration: none;
+                            width: 30px;
+                            color: white;
+                           
+                        }
+                    }
+                }
+                .logo-redes{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    
+                    .redes{
+                        display: flex;
+                        justify-content: space-around;
+                        li{
+                            list-style: none;
+                            .item-red{
+                                width: 40px;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                    .logo-inferior{
+                        width: 150px;
+                    }
+                }
+            }
+            .derechos{
+                display: flex;
+                justify-content: flex-end;
+                padding: 10px;
+                font-size: 10px;
+                color: grey;
+            }
+        }
+    }
+}
